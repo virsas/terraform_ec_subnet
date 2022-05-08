@@ -21,7 +21,7 @@ Create a subnet used for by elasticcache instance
 ##############
 # Module
 ##############
-module "alb_main_waf" {
+module "es_subnet_default" {
   source = "github.com/virsas/terraform_es_subnet"
   name = "esSubnet"
   subnets = [ module.vpc_subnet_es_a.id, module.vpc_subnet_es_b.id ]
