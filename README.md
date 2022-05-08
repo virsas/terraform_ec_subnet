@@ -1,6 +1,6 @@
-# terraform_es_subnet
+# terraform_ec_subnet
 
-Create a subnet used for by elasticcache instance
+Create a subnet used for by Elastic cache instance
 
 ##  Dependencies
 
@@ -21,9 +21,13 @@ Create a subnet used for by elasticcache instance
 ##############
 # Module
 ##############
-module "es_subnet_default" {
-  source = "github.com/virsas/terraform_es_subnet"
-  name = "esSubnet"
-  subnets = [ module.vpc_subnet_es_a.id, module.vpc_subnet_es_b.id ]
+module "ec_subnet_default" {
+  source = "github.com/virsas/terraform_ec_subnet"
+  name = "ecSubnet"
+  subnets = [ module.vpc_subnet_ec_a.id, module.vpc_subnet_ec_b.id ]
 }
 ```
+
+## Ouput
+
+- name
