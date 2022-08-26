@@ -22,7 +22,7 @@ Create a subnet used for by Elastic cache instance
 # Module
 ##############
 module "ec_subnet_default" {
-  source = "github.com/virsas/terraform_ec_subnet"
+  source = "git::https://github.com/virsas/terraform_ec_subnet.git?ref=v1.0.0"
   name = "ecSubnet"
   subnets = [ module.vpc_subnet_ec_a.id, module.vpc_subnet_ec_b.id ]
 }
